@@ -9,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,10 +31,19 @@ namespace GoT
         public MainPage()
         {
             this.InitializeComponent();
-            
+            ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+
         }
 
-        private void Books_ItemClick(object sender, ItemClickEventArgs e)
+        private void SearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
+        {
+            var text = args.QueryText;
+            //Get all books, characters and houses
+            //Check if a name contains 'text'
+        }
+
+        private void BooksButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
