@@ -8,93 +8,111 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid Margin="246,0,-246,11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="101*"/>
-                <RowDefinition Height="899*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <!--
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            -->
             <SearchBox x:Name="Books_Searchbox"  QuerySubmitted="BooksSearchBox_QuerySubmitted" 
-                   Margin="44,56,745,810.8" SearchHistoryEnabled="False" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                       SearchHistoryEnabled="False" Grid.ColumnSpan="6" 
+                       Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Center"/>
 
-            <ListBox x:Name="BooksListBox" Margin="44,135,1149,124.8" SelectionChanged="BooksListBox_SelectionChanged" Grid.Row="1"/>
+            <ListBox x:Name="BooksListBox" SelectionChanged="BooksListBox_SelectionChanged"
+                     Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="12"/>
 
 
 
 
-            <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Margin="381,182,990,684.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock x:Name="NameTextBox" FontSize="10" Margin="547,182,652,682.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock Text="ISBN:"  FontWeight="Bold" FontSize="11" Margin="383,135,991,727.8" Grid.Row="1"/>
+            <TextBlock Text="ISBN:"  FontWeight="Bold" FontSize="11" Grid.Row="3" Grid.Column="4"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock x:Name="ISBNTextBox" FontSize="10" Margin="547,135,652,732.8" Grid.Row="1"/>
+            <TextBlock x:Name="ISBNTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top"  Text="Authors:" 
-                     FontWeight="Bold" FontSize="11" Margin="381,240,990,0" Grid.Row="1"/>
+            <TextBlock Text="Authors:" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
 
-            <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Margin="540,214,659,608.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Grid.Column="5" Grid.Row="4"
+                          HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Number of pages:"
-                     FontWeight="Bold" FontSize="11" Margin="381,288,976,0" Grid.Row="1" Height="17"/>
+            <TextBlock VerticalAlignment="Center" Text="Number of pages:" HorizontalAlignment="Center"
+                       FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
 
-            <TextBlock x:Name="NumberOfPagesTextBox" TextAlignment="Center" FontSize="10" Margin="540,282,844,576.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="NumberOfPagesTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"
+                       Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Publisher:"
-                     FontWeight="Bold" FontSize="11" Margin="381,337,990,0" Grid.Row="1" HorizontalAlignment="Stretch"/>
+            <TextBlock VerticalAlignment="Center" Text="Publisher:" HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="6" />
 
-            <TextBlock x:Name="PublisherTextBox"  FontSize="10" Margin="547,338,652,537.8" Grid.Row="1"/>
+            <TextBlock x:Name="PublisherTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Country:" 
-                     FontWeight="Bold" FontSize="11" Margin="381,383,990,0" Grid.Row="1"/>
+            <TextBlock VerticalAlignment="Center" Text="Country:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="7"/>
 
-            <TextBlock x:Name="CountryTextBox" FontSize="10" Margin="540,384,659,487.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="CountryTextBox" FontSize="10" Grid.Column="5" Grid.Row="7"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Media Type:" 
-                     FontWeight="Bold" FontSize="11" Margin="382,430,989,0" Grid.Row="1"/>
+            <TextBlock VerticalAlignment="Center" Text="Media Type:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="8"/>
 
-            <TextBlock x:Name="MediaTypeTextBox" FontSize="10" Margin="540,431,659,443.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="MediaTypeTextBox" FontSize="10" Grid.Column="5" Grid.Row="8" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Released:" 
-                     FontWeight="Bold" FontSize="11" Margin="382,468,989,0" Grid.Row="1" />
+            <TextBlock HorizontalAlignment="Center" Text="Released:" VerticalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="9" />
 
-            <TextBlock x:Name="ReleasedTextBox" FontSize="10" Margin="541,468,658,405.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <TextBlock x:Name="ReleasedTextBox" FontSize="10" Grid.Row="9" Grid.Column="5"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="Characters:"  
-                     FontWeight="Bold" FontSize="11"  Margin="381,506,1007,0" Grid.Row="1"/>
+            <TextBlock VerticalAlignment="Center" Text="Characters:" HorizontalAlignment="Center" 
+                     FontWeight="Bold" FontSize="11"  Grid.Column="4" Grid.Row="10"/>
 
-            <ListBox x:Name="CharactersListBox" FontSize="10" Margin="540,498,810,360.8" Grid.Row="1"/>
+            <ListBox x:Name="CharactersListBox" FontSize="10"  HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Column="5" Grid.Row="10" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Top" Text="POV Characters:"  
-                     FontWeight="Bold" FontSize="11" Margin="381,562,1021,0" Grid.Row="1" HorizontalAlignment="Stretch"/>
+            <TextBlock VerticalAlignment="Center" Text="POV Characters:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="12" />
 
-            <ListBox x:Name="povCharactersListBox" FontSize="10" Margin="540,555,810,304.8" Grid.Row="1"/>
-
+            <ListBox x:Name="povCharactersListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="12" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
 
         </Grid>
 

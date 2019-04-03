@@ -33,8 +33,58 @@ namespace GoT.Views
             HousesList = new List<House>();
             House a = new House();
             a.name = "First test house";
+            a.ancestralWeapons.Add("weapon1");
+            a.ancestralWeapons.Add("weapon2");
+            a.cadetBranches.Add("cadet1");
+            a.cadetBranches.Add("cadet2");
+            a.coatOfArms = "coat1";
+            a.currentLord = "current lord";
+            a.diedOut = "27/10/2010";
+            a.founded = "12/03/2000";
+            a.founder = "founder 1";
+            a.heir = "heir 1";
+            a.overlord = "overlord 1";
+            a.region = "winterfell";
+            a.seats.Add("seat 1");
+            a.seats.Add("seat 2");
+            a.seats.Add("seat 3");
+            a.seats.Add("seat 4");
+            a.seats.Add("seat 5");
+            a.swornMembers.Add("member 1");
+            a.swornMembers.Add("member 2");
+            a.swornMembers.Add("member 3");
+            a.swornMembers.Add("member 4");
+            a.titles.Add("title 1");
+            a.titles.Add("title 2");
+            a.titles.Add("title 3");
+            a.words = "The words of the house test number one";
             House b = new House();
             b.name = "Second test house";
+            b.ancestralWeapons.Add("weapon1");
+            b.ancestralWeapons.Add("weapon2");
+            b.cadetBranches.Add("cadet1");
+            b.cadetBranches.Add("cadet2");
+            b.coatOfArms = "coat1";
+            b.currentLord = "current lord";
+            b.diedOut = "27/10/2010";
+            b.founded = "12/03/2000";
+            b.founder = "founder 1";
+            b.heir = "heir 1";
+            b.overlord = "overlord 1";
+            b.region = "winterfell";
+            b.seats.Add("seat 1");
+            b.seats.Add("seat 2");
+            b.seats.Add("seat 3");
+            b.seats.Add("seat 4");
+            b.seats.Add("seat 5");
+            b.swornMembers.Add("member 1");
+            b.swornMembers.Add("member 2");
+            b.swornMembers.Add("member 3");
+            b.swornMembers.Add("member 4");
+            b.titles.Add("title 1");
+            b.titles.Add("title 2");
+            b.titles.Add("title 3");
+            b.words = "The words of the house test number one";
             HousesList.Add(a);
             HousesList.Add(b);
             /*
@@ -73,7 +123,23 @@ namespace GoT.Views
 
         private void HousesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selected = (sender as ListBox).SelectedItem;
+            var selected = (sender as ListBox).SelectedItem as House;
+            AncestralWeaponsListBox.ItemsSource = selected.ancestralWeapons;
+            CadetBranchesListBox.ItemsSource = selected.cadetBranches;
+            SwornMembersListBox.ItemsSource = selected.swornMembers;
+            DiedOutTextBox.Text = selected.diedOut;
+            FounderTextBox.Text = selected.founder;
+            FoundedTextBox.Text = selected.founded;
+            OverlordTextBox.Text = selected.overlord;
+            HeirTextBox.Text = selected.heir;
+            CurrentLordTextBox.Text = selected.currentLord;
+            SeatsListBox.ItemsSource = selected.seats;
+            TitlesListBox.ItemsSource = selected.titles;
+            WordsTextBox.Text = selected.words;
+            CoatOfArmsTextBox.Text = selected.coatOfArms;
+            RegionTextBox.Text = selected.region;
+            NameTextBox.Text = selected.name;
+
 
 
         }

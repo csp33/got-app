@@ -9,34 +9,161 @@
 
     <Grid>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
-            <SearchBox x:Name="Characters_Searchbox" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="0" QuerySubmitted="CharactersSearchBox_QuerySubmitted" 
-                   Margin="44,57,45,920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SearchHistoryEnabled="False"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <SearchBox x:Name="Characters_Searchbox"  QuerySubmitted="CharactersSearchBox_QuerySubmitted" 
+                       SearchHistoryEnabled="False" Grid.ColumnSpan="6" 
+                       Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                       VerticalAlignment="Center"/>
 
-            <ListBox x:Name="CharactersListBox" SelectionChanged="CharactersListBox_SelectionChanged" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Margin="44,236,45,74" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <ListBox x:Name="CharactersListBox" SelectionChanged="CharactersListBox_SelectionChanged"
+                     Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="22"/>
+
+
+
+            <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock Text="Gender:"  FontWeight="Bold" FontSize="11" Grid.Row="3" Grid.Column="4"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock x:Name="GenderTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock Text="Culture:" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
+
+            <TextBlock x:Name="CultureTextBox" FontSize="10" Grid.Column="5" Grid.Row="4" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Born:" HorizontalAlignment="Center"
+                       FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
+
+            <TextBlock x:Name="BornTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"
+                       Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Died:" HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="6" />
+
+            <TextBlock x:Name="DiedTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Father:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="7"/>
+
+            <TextBlock x:Name="FatherTextBox" FontSize="10" Grid.Column="5" Grid.Row="7"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Mother:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="8"/>
+
+            <TextBlock x:Name="MotherTextBox" FontSize="10" Grid.Column="5" Grid.Row="8"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Spouse:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="9"/>
+
+            <TextBlock x:Name="SpouseTextBox" FontSize="10" Grid.Column="5" Grid.Row="9" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock HorizontalAlignment="Center" Text="Allegiances:" VerticalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="10" />
+
+            <ListBox x:Name="AllegiancesListBox" FontSize="10"  HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Column="5" Grid.Row="10" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Titles:" HorizontalAlignment="Center" 
+                     FontWeight="Bold" FontSize="11"  Grid.Column="4" Grid.Row="12"/>
+
+            <ListBox x:Name="TitlesListBox" FontSize="10"  HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Column="5" Grid.Row="12" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Aliases:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="14" />
+
+            <ListBox x:Name="AliasesListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="14" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Books:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="16" />
+
+            <ListBox x:Name="BooksListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="16" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="POV Books:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="18" />
+
+            <ListBox x:Name="POVBooksListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="18" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="TV Series:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="20" />
+
+            <ListBox x:Name="TVSeriesListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="20" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+            <TextBlock VerticalAlignment="Center" Text="Played by:"  HorizontalAlignment="Center"
+                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="22" />
+
+            <ListBox x:Name="PlayedByListBox" FontSize="10" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Row="22" Grid.Column="5" Grid.RowSpan="2"
+                     Background="White" HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+
+
 
         </Grid>
 

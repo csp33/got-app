@@ -13,17 +13,17 @@ namespace GoT.Models
         public string region { get; set; }
         public string coatOfArms { get; set; }
         public string words { get; set; }
-        public List<string> titles { get; set; }
-        public List<string> seats { get; set; }
+        public List<string> titles { get; set; } = new List<string>();
+        public List<string> seats { get; set; } = new List<string>();
         public string currentLord { get; set; }
         public string heir { get; set; }
         public string overlord { get; set; }
         public string founded { get; set; }
         public string founder { get; set; }
         public string diedOut { get; set; }
-        public List<string> ancestralWeapons { get; set; }
-        public List<string> cadetBranches { get; set; }
-        public List<string> swornMembers { get; set; }
+        public List<string> ancestralWeapons { get; set; } = new List<string>();
+        public List<string> cadetBranches { get; set; } = new List<string>();
+        public List<string> swornMembers { get; set; } = new List<string>();
 
         public override string ToString()
         {

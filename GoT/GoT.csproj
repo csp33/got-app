@@ -126,17 +126,11 @@
     <Compile Include="Views\BooksPage.xaml.cs">
       <DependentUpon>BooksPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CharacterDetailedView.xaml.cs">
-      <DependentUpon>CharacterDetailedView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CharactersPage.xaml.cs">
       <DependentUpon>CharactersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\HouseDetailedView.xaml.cs">
-      <DependentUpon>HouseDetailedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HousesPage.xaml.cs">
       <DependentUpon>HousesPage.xaml</DependentUpon>
@@ -175,19 +169,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CharacterDetailedView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\CharactersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HomePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\HouseDetailedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
