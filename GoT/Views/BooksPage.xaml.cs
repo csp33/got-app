@@ -70,5 +70,12 @@ namespace GoT.Views
                 BooksListBox.ItemsSource = SearchResults;
             }
         }
+
+        private void BooksListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selected = (sender as ListBox).SelectedItem;
+
+
+        }
     }
 }

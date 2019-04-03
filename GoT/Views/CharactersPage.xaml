@@ -36,7 +36,7 @@
             <SearchBox x:Name="Characters_Searchbox" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="0" QuerySubmitted="CharactersSearchBox_QuerySubmitted" 
                    Margin="44,57,45,920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SearchHistoryEnabled="False"/>
 
-            <ListBox x:Name="CharactersListBox" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Margin="44,236,45,74" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            <ListBox x:Name="CharactersListBox" SelectionChanged="CharactersListBox_SelectionChanged" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Margin="44,236,45,74" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
         </Grid>
 

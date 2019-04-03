@@ -71,5 +71,12 @@ namespace GoT.Views
             }
         }
 
+        private void HousesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selected = (sender as ListBox).SelectedItem;
+
+
+        }
+
     }
 }
