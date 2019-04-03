@@ -30,9 +30,9 @@ namespace GoT.Views
             this.InitializeComponent();
             CharactersList = new List<Character>();
             Character a = new Character();
-            a.name = "A test character";
+            a.name = "First test character";
             Character b = new Character();
-            b.name = "B test character";
+            b.name = "Second test character";
             CharactersList.Add(a);
             CharactersList.Add(b);
 

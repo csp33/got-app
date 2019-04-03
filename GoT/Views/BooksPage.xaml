@@ -8,7 +8,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Grid>
+        <Grid Margin="246,0,-246,11" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="101*"/>
+                <RowDefinition Height="899*"/>
+            </Grid.RowDefinitions>
+            <!--
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -33,11 +38,63 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <SearchBox x:Name="Books_Searchbox" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="0" QuerySubmitted="BooksSearchBox_QuerySubmitted" 
-                   Margin="44,57,45,920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SearchHistoryEnabled="False"/>
+            -->
+            <SearchBox x:Name="Books_Searchbox"  QuerySubmitted="BooksSearchBox_QuerySubmitted" 
+                   Margin="44,56,745,810.8" SearchHistoryEnabled="False" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-            <ListBox x:Name="BooksListBox" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Margin="44,236,45,74" 
-                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="BooksListBox_SelectionChanged"/>
+            <ListBox x:Name="BooksListBox" Margin="44,135,1149,124.8" SelectionChanged="BooksListBox_SelectionChanged" Grid.Row="1"/>
+
+
+
+
+            <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Margin="381,182,990,684.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock x:Name="NameTextBox" FontSize="10" Margin="547,182,652,682.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock Text="ISBN:"  FontWeight="Bold" FontSize="11" Margin="383,135,991,727.8" Grid.Row="1"/>
+
+            <TextBlock x:Name="ISBNTextBox" FontSize="10" Margin="547,135,652,732.8" Grid.Row="1"/>
+
+            <TextBlock VerticalAlignment="Top"  Text="Authors:" 
+                     FontWeight="Bold" FontSize="11" Margin="381,240,990,0" Grid.Row="1"/>
+
+            <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Margin="540,214,659,608.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Number of pages:"
+                     FontWeight="Bold" FontSize="11" Margin="381,288,976,0" Grid.Row="1" Height="17"/>
+
+            <TextBlock x:Name="NumberOfPagesTextBox" TextAlignment="Center" FontSize="10" Margin="540,282,844,576.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Publisher:"
+                     FontWeight="Bold" FontSize="11" Margin="381,337,990,0" Grid.Row="1" HorizontalAlignment="Stretch"/>
+
+            <TextBlock x:Name="PublisherTextBox"  FontSize="10" Margin="547,338,652,537.8" Grid.Row="1"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Country:" 
+                     FontWeight="Bold" FontSize="11" Margin="381,383,990,0" Grid.Row="1"/>
+
+            <TextBlock x:Name="CountryTextBox" FontSize="10" Margin="540,384,659,487.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Media Type:" 
+                     FontWeight="Bold" FontSize="11" Margin="382,430,989,0" Grid.Row="1"/>
+
+            <TextBlock x:Name="MediaTypeTextBox" FontSize="10" Margin="540,431,659,443.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Released:" 
+                     FontWeight="Bold" FontSize="11" Margin="382,468,989,0" Grid.Row="1" />
+
+            <TextBlock x:Name="ReleasedTextBox" FontSize="10" Margin="541,468,658,405.8" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+            <TextBlock VerticalAlignment="Top" Text="Characters:"  
+                     FontWeight="Bold" FontSize="11"  Margin="381,506,1007,0" Grid.Row="1"/>
+
+            <ListBox x:Name="CharactersListBox" FontSize="10" Margin="540,498,810,360.8" Grid.Row="1"/>
+
+            <TextBlock VerticalAlignment="Top" Text="POV Characters:"  
+                     FontWeight="Bold" FontSize="11" Margin="381,562,1021,0" Grid.Row="1" HorizontalAlignment="Stretch"/>
+
+            <ListBox x:Name="povCharactersListBox" FontSize="10" Margin="540,555,810,304.8" Grid.Row="1"/>
+
 
         </Grid>
 

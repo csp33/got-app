@@ -17,6 +17,8 @@
     <Grid>
         <NavigationView x:Name="NavView"
             IsSettingsVisible="False"
+                        PaneDisplayMode="LeftCompact"
+            IsBackButtonVisible="Collapsed"
             ItemInvoked="NavView_ItemInvoked">
 
 

@@ -32,9 +32,9 @@ namespace GoT.Views
             this.InitializeComponent();
             HousesList = new List<House>();
             House a = new House();
-            a.name = "A test house";
+            a.name = "First test house";
             House b = new House();
-            b.name = "B test house";
+            b.name = "Second test house";
             HousesList.Add(a);
             HousesList.Add(b);
             /*
