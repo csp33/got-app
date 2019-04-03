@@ -53,65 +53,65 @@
             <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
                         HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock Text="ISBN:"  FontWeight="Bold" FontSize="11" Grid.Row="3" Grid.Column="4"
                        HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-            <TextBlock x:Name="ISBNTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="ISBNTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock Text="Authors:" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
 
-            <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Grid.Column="5" Grid.Row="4"
-                          HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="4"
+                          HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock VerticalAlignment="Center" Text="Number of pages:" HorizontalAlignment="Center"
                        FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
 
-            <TextBlock x:Name="NumberOfPagesTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"
-                       Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="NumberOfPagesTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5" Grid.ColumnSpan="4"
+                       Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Center" Text="Publisher:" HorizontalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" Text="Publisher:" HorizontalAlignment="Center" 
                      FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="6" />
 
-            <TextBlock x:Name="PublisherTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="PublisherTextBox" FontSize="10" Grid.Column="5" Grid.Row="6" Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock VerticalAlignment="Center" Text="Country:"  HorizontalAlignment="Center"
                      FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="7"/>
 
-            <TextBlock x:Name="CountryTextBox" FontSize="10" Grid.Column="5" Grid.Row="7"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="CountryTextBox" FontSize="10" Grid.Column="5" Grid.Row="7" Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock VerticalAlignment="Center" Text="Media Type:"  HorizontalAlignment="Center"
                      FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="8"/>
 
-            <TextBlock x:Name="MediaTypeTextBox" FontSize="10" Grid.Column="5" Grid.Row="8" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="MediaTypeTextBox" FontSize="10" Grid.Column="5" Grid.Row="8"  Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock HorizontalAlignment="Center" Text="Released:" VerticalAlignment="Center"
                      FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="9" />
 
-            <TextBlock x:Name="ReleasedTextBox" FontSize="10" Grid.Row="9" Grid.Column="5"
-                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock x:Name="ReleasedTextBox" FontSize="10" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
             <TextBlock VerticalAlignment="Center" Text="Characters:" HorizontalAlignment="Center" 
                      FontWeight="Bold" FontSize="11"  Grid.Column="4" Grid.Row="10"/>
 
-            <ListBox x:Name="CharactersListBox" FontSize="10"  HorizontalAlignment="Center"
+            <ListBox x:Name="CharactersListBox" FontSize="10"  HorizontalAlignment="Left" Grid.ColumnSpan="4"
                      VerticalAlignment="Center" Grid.Column="5" Grid.Row="10" Grid.RowSpan="2"
-                     Background="White" HorizontalContentAlignment="Center" 
+                     Background="White" HorizontalContentAlignment="Left" 
                      VerticalContentAlignment="Center"/>
 
-            <TextBlock VerticalAlignment="Center" Text="POV Characters:"  HorizontalAlignment="Center"
+            <TextBlock VerticalAlignment="Center" Text="POV Characters:"  HorizontalAlignment="Center" 
                      FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="12" />
 
-            <ListBox x:Name="povCharactersListBox" FontSize="10" HorizontalAlignment="Center"
+            <ListBox x:Name="povCharactersListBox" FontSize="10" HorizontalAlignment="Left" Grid.ColumnSpan="4"
                      VerticalAlignment="Center" Grid.Row="12" Grid.Column="5" Grid.RowSpan="2"
-                     Background="White" HorizontalContentAlignment="Center" 
+                     Background="White" HorizontalContentAlignment="Left" 
                      VerticalContentAlignment="Center"/>
 
         </Grid>

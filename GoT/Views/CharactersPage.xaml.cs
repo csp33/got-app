@@ -1,4 +1,5 @@
 ﻿using GoT.Models;
+using GoT.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,73 +30,6 @@ namespace GoT.Views
         {
             this.InitializeComponent();
             CharactersList = new List<Character>();
-            Character a = new Character();
-            a.name = "First test character";
-            a.gender = "Male";
-            a.aliases.Add("Alias1");
-            a.aliases.Add("Alias2");
-            a.allegiances.Add("allegiance 1");
-            a.allegiances.Add("allegiance 2");
-            a.books.Add("first");
-            a.books.Add("second");
-            a.books.Add("third");
-            a.culture = "culture 1";
-            a.born = "17/10/1980";
-            a.died = "20/10/2010";
-            a.father = "father";
-            a.mother = "mother";
-            a.playedBy.Add("actor");
-            a.playedBy.Add("actor2");
-            a.playedBy.Add("actor3");
-            a.povBooks.Add("first book");
-            a.povBooks.Add("sec book");
-            a.povBooks.Add("third book");
-            a.spouse = "spouse 1";
-            a.titles.Add("king");
-            a.titles.Add("title2");
-            a.tvSeries.Add("season 1");
-            a.tvSeries.Add("season 2");
-
-            Character b = new Character();
-            b.name = "Second test character";
-            b.aliases.Add("Alias1");
-            b.aliases.Add("Alias2");
-            b.allegiances.Add("allegiance 1");
-            b.allegiances.Add("allegiance 2"); b.books.Add("first");
-            b.books.Add("second");
-            b.books.Add("third");
-            b.born = "17/10/1980";
-            b.died = "20/10/2010";
-            b.father = "father";
-            b.culture = "culture 2";
-            b.mother = "mother";
-            b.playedBy.Add("actor");
-            b.gender = "Female";
-            b.playedBy.Add("actor2");
-            b.playedBy.Add("actor3");
-            b.povBooks.Add("first book");
-            b.povBooks.Add("sec book");
-            b.povBooks.Add("third book");
-            b.spouse = "spouse 1";
-            b.titles.Add("king");
-            b.titles.Add("title2");
-            b.tvSeries.Add("season 1");
-            b.tvSeries.Add("season 2");
-            CharactersList.Add(a);
-            CharactersList.Add(b);
-
-
-            /*
-            var service = new GoTService();
-            var Characters = await service.GetCharactersAsync();
-            Characters_list = new List<House>();
-
-            foreach(var item in CharactersPage)
-            {
-                Characters_list.Add(item);
-            }
-            */
-            CharactersListBox.ItemsSource = CharactersList;
         }
 
         private void CharactersSearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
@@ -137,8 +71,21 @@ namespace GoT.Views
             BooksListBox.ItemsSource = selected.books;
             POVBooksListBox.ItemsSource = selected.povBooks;
             TVSeriesListBox.ItemsSource = selected.tvSeries;
-            PlayedByListBox.ItemsSource = selected.playedBy;
-            
+            PlayedByListBox.ItemsSource = selected.playedBy;      
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            var service = new GoTService();
+            var characters = await service.GetCharactersAsync();
+            foreach (var item in characters)
+            {
+                if (item.name != null)
+                {
+                    CharactersList.Add(item);
+                }
+            }
+            CharactersListBox.ItemsSource = CharactersList;
         }
     }
 }
