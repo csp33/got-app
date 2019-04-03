@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="GoT.Views.BooksPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <SearchBox x:Name="Books_Searchbox" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="0" QuerySubmitted="BooksSearchBox_QuerySubmitted" 
+                   Margin="44,57,45,920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SearchHistoryEnabled="False"/>
+
+            <ListBox x:Name="BooksListBox" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="8" Grid.Row="0" Margin="44,236,45,74" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+        </Grid>
+
+    </Grid>
+</Page>

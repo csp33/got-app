@@ -19,5 +19,10 @@ namespace GoT.Models
         public DateTime released { get; set; }
         public List<string> characters { get; set; }
         public List<string> povCharacters { get; set; }
+
+        public override string ToString()
+        {
+            return name;
+        }
     }
 }

@@ -22,20 +22,20 @@ namespace GoT.ViewModels
         {
             var service = new GoTService();
 
-            /**Books**/
+            /**BooksPage**/
             var books = await service.GetBooksAsync();
             foreach (var item in books)
             {
                 Books.Add(item);
             }
-            /**Characters**/
+            /**CharactersPage**/
             var characters = await service.GetCharactersAsync();
             foreach (var item in characters)
             {
                 Characters.Add(item);
             }
 
-            /**Houses**/
+            /**HousesPage**/
             var houses = await service.GetHousesAsync();
             foreach (var item in houses)
             {

@@ -25,5 +25,10 @@ namespace GoT.Models
         public List<string> cadetBranches { get; set; }
         public List<string> swornMembers { get; set; }
 
+        public override string ToString()
+        {
+            return name;
+        }
+
     }
 }

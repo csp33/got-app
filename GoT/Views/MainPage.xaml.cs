@@ -1,6 +1,7 @@
 ﻿using GoT.Models;
 using GoT.Services;
 using GoT.ViewModels;
+using GoT.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,21 +32,31 @@ namespace GoT
         public MainPage()
         {
             this.InitializeComponent();
-            ApplicationView.PreferredLaunchViewSize = new Size(1920, 1080);
-            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            RootFrame.Navigate(typeof(HomePage));
 
         }
 
-        private void SearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
-        {
-            var text = args.QueryText;
-            //Get all books, characters and houses
-            //Check if a name contains 'text'
-        }
 
-        private void BooksButton_Click(object sender, RoutedEventArgs e)
+        private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
+            var invokedItem = args.InvokedItem as string;
 
+            switch (invokedItem.ToLower())
+            {
+                case "houses":
+                    RootFrame.Navigate(typeof(HousesPage));
+                    break;
+                case "books":
+                    RootFrame.Navigate(typeof(BooksPage));
+                    break;
+                case "characters":
+                    RootFrame.Navigate(typeof(CharactersPage));
+                    break;
+                case "home":
+                default:
+                    RootFrame.Navigate(typeof(HomePage));
+                    break;
+            }
         }
     }
 }
