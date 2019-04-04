@@ -3,19 +3,19 @@ Game of Thrones API done with C# and XAML (UWP) for the subject "Client Side Tec
 
 Done using https://anapioficeandfire.com/
 
-![alt text][mainscreen]
+![][mainscreen]
 
-![alt text][booksscreen]
+![][booksscreen]
 
-![alt text][charactersscreen]
+![][charactersscreen]
 
-![alt text][housesscreen]
+![][housesscreen]
 
 
 
 [mainscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss1.PNG
 
-[booksscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss2.PNG
+[booksscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss2.png
 
 [charactersscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss3.PNG
 
