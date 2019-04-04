@@ -17,29 +17,66 @@
                 </ImageBrush.Transform>
             </ImageBrush>
         </Grid.Background>
-        <TextBlock FontSize="44" FontFamily="/Assets/Fonts/gotfont.ttf#Game of Thrones" 
-                   FontWeight="Bold" Margin="0,77,0,862" HorizontalAlignment="Center" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="2" Grid.RowSpan="2"  Grid.Column="2" 
+                   Grid.ColumnSpan="4" VerticalAlignment="Center" 
+                   FontSize="44" 
+                   FontFamily="/Assets/Fonts/gotfont.ttf#Game of Thrones" 
+                   FontWeight="Bold" HorizontalAlignment="Center" >
             <Run Text="Game    of    Thrones" /><LineBreak/><Run/>
         </TextBlock>
 
-        <TextBlock FontFamily="Segoe UI" FontSize="30" 
-                   HorizontalAlignment="Center" Margin="0,182,0,757">
+        <TextBlock FontFamily="Segoe UI" FontSize="30"  Grid.Row="4" 
+                   Grid.Column="2" 
+                   Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center">
             Please select an item from the menu.
         </TextBlock>
 
         <TextBlock FontFamily="Segoe UI" FontSize="24" 
-                   HorizontalAlignment="Center" Margin="0,253,0,709" VerticalAlignment="Stretch">
+                   Grid.Row="6" Grid.Column="2" 
+                   Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center" VerticalAlignment="Stretch">
             Thanks to <Hyperlink NavigateUri="https://anapioficeandfire.com/">
                 https://anapioficeandfire.com/</Hyperlink>
         </TextBlock>
 
         <TextBlock FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"
-                   HorizontalAlignment="Left" Margin="470,304,0,646">
+                   HorizontalAlignment="Center"  Grid.Row="8" Grid.Column="2" 
+                   Grid.ColumnSpan="4">
             Source code available at <Hyperlink NavigateUri="https://github.com/csp98/got-app">
                 https://github.com/csp98/got-app </Hyperlink>
         </TextBlock>
 
-        <Image Source="/Assets/github.png" Margin="386,304,1021,646" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Image Source="/Assets/github.png" HorizontalAlignment="Right" Grid.Row="8" Grid.Column="1"  VerticalAlignment="Center"/>
 
         
     </Grid>

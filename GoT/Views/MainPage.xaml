@@ -8,12 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
    >
-    <!--
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets/bg.png" Stretch="Fill"/>
-        </Grid.Background>
-    -->
     <Grid>
         <NavigationView x:Name="NavView"
             IsSettingsVisible="False"

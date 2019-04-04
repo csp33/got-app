@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="c3772285-77cc-4bfc-91f6-4dc0ce3ab6de" Publisher="CN=karlo" Version="1.0.0.0" />
+  <Identity Name="got-app" Publisher="CN=karlo" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="c3772285-77cc-4bfc-91f6-4dc0ce3ab6de" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>GoT</DisplayName>
-    <PublisherDisplayName>karlo</PublisherDisplayName>
+    <PublisherDisplayName>csp98</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="GoT.App">
-      <uap:VisualElements DisplayName="Game of Thrones App" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="GoT" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Game of Thrones App" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Game of Thrones application done with https://anapioficeandfire.com/." BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
