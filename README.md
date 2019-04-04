@@ -19,4 +19,4 @@ Done using https://anapioficeandfire.com/
 
 [charactersscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss3.PNG
 
-[housesscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss4.PNG
+[housesscreen]: https://github.com/csp98/got-app/raw/master/screenshots/ss4.png
