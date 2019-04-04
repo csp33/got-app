@@ -12,19 +12,19 @@ namespace GoT.Services
     {
         private readonly Uri serverUrl = new Uri("https://www.anapioficeandfire.com");
 
-        public async Task<List<Book>> GetBooksAsync()
+        public async Task<List<Book>> GetBooksAsync(int page)
         {
-            return await GetAsync<List<Book>>(new Uri(serverUrl, "/api/books/?pagesize="+int.MaxValue.ToString()));
+            return await GetAsync<List<Book>>(new Uri(serverUrl, "/api/books/?pagesize=50&page="+page.ToString()));
         }
 
-        public async Task<List<Character>> GetCharactersAsync()
+        public async Task<List<Character>> GetCharactersAsync(int page)
         {
-            return await GetAsync<List<Character>>(new Uri(serverUrl, "/api/characters/?pagesize=" + int.MaxValue.ToString()));
+            return await GetAsync<List<Character>>(new Uri(serverUrl, "/api/characters/?pagesize=50&page=" + page.ToString()));
         }
 
-        public async Task<List<House>> GetHousesAsync()
+        public async Task<List<House>> GetHousesAsync(int page)
         {
-            return await GetAsync<List<House>>(new Uri(serverUrl, "/api/houses/?pagesize=" + int.MaxValue.ToString()));
+            return await GetAsync<List<House>>(new Uri(serverUrl, "/api/houses/?pagesize=50&page=" + page.ToString()));
         }
 
         public async Task<Book> GetBookAsync(string code)

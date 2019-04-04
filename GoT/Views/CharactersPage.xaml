@@ -18,6 +18,8 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -26,21 +28,9 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="30"/><!--allegiances-->
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="30"/> <!--aliases-->
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="10"/>
-            <RowDefinition Height="30"/> <!--books-->
+            <!--allegiances-->
             <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
@@ -49,10 +39,27 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
+            <!--aliases-->
             <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
+            <!--books-->
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -68,48 +75,51 @@
         </Grid.ColumnDefinitions>
         <SearchBox x:Name="Characters_Searchbox"  QuerySubmitted="CharactersSearchBox_QuerySubmitted" 
                     SearchHistoryEnabled="False" Grid.ColumnSpan="6" 
-                    Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                    Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"/>
 
         <ListBox x:Name="CharactersListBox" SelectionChanged="CharactersListBox_SelectionChanged"
-                    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="36"/>
+                    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="35"
+                />
 
+
+        <ProgressRing x:Name="LoadingRing" Grid.Column="1" Grid.Row="39" Grid.ColumnSpan="3"/>
 
 
         <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"
+        <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"  Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock Text="Gender:"  FontWeight="Bold" FontSize="11" Grid.Row="3" Grid.Column="4"
                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="GenderTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" 
+        <TextBlock x:Name="GenderTextBox" FontSize="10" Grid.Column="5" Grid.Row="3"   Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock Text="Culture:" HorizontalAlignment="Center" VerticalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
 
-        <TextBlock x:Name="CultureTextBox" FontSize="10" Grid.Column="5" Grid.Row="4" 
+        <TextBlock x:Name="CultureTextBox" FontSize="10" Grid.Column="5" Grid.Row="4"   Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Born:" HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
 
-        <TextBlock x:Name="BornTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"
+        <TextBlock x:Name="BornTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"  Grid.ColumnSpan="4"
                     Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Died:" HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="6" />
 
-        <TextBlock x:Name="DiedTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"
+        <TextBlock x:Name="DiedTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"  Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Father:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="7"/>
 
-        <ListBox x:Name="FatherListBox" FontSize="10" Grid.Column="5" Grid.Row="7" Background="Transparent"
+        <ListBox x:Name="FatherListBox" FontSize="10" Grid.ColumnSpan="4" Grid.Column="5" Grid.Row="7" Background="Transparent"
                  HorizontalAlignment="Left" VerticalAlignment="Center" 
                  SelectionChanged="FatherListBox_SelectionChanged"/>
 
@@ -117,20 +127,20 @@
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="8"/>
 
         <ListBox x:Name="MotherListBox" FontSize="10" Grid.Column="5" Grid.Row="8" Background="Transparent"
-                 HorizontalAlignment="Left" VerticalAlignment="Center" 
+                 HorizontalAlignment="Left" Grid.ColumnSpan="4" VerticalAlignment="Center" 
                  SelectionChanged="FatherListBox_SelectionChanged"/>
 
         <TextBlock VerticalAlignment="Center" Text="Spouse:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="9"/>
 
-        <ListBox x:Name="SpouseListBox" FontSize="10" Grid.Column="5" Grid.Row="9" Background="Transparent"
+        <ListBox x:Name="SpouseListBox" FontSize="10" Grid.ColumnSpan="4" Grid.Column="5" Grid.Row="9" Background="Transparent"
                  HorizontalAlignment="Left" VerticalAlignment="Center" 
                  SelectionChanged="FatherListBox_SelectionChanged"/>
 
         <TextBlock HorizontalAlignment="Center" Text="Allegiances:" VerticalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="11" Grid.RowSpan="2" />
 
-        <ListBox x:Name="AllegiancesListBox" FontSize="10"  HorizontalAlignment="Left"
+        <ListBox x:Name="AllegiancesListBox" FontSize="10"  HorizontalAlignment="Left" 
                     VerticalAlignment="Center" Grid.Column="5" Grid.Row="11" Grid.RowSpan="2"
                     Background="Transparent" HorizontalContentAlignment="Left" 
                     VerticalContentAlignment="Top" Grid.ColumnSpan="4"
@@ -169,19 +179,19 @@
                     VerticalContentAlignment="Top" Grid.ColumnSpan="4" SelectionChanged="BooksListBox_SelectionChanged"/>
 
         <TextBlock VerticalAlignment="Center" Text="TV Series:"  HorizontalAlignment="Center"
-                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="30" Grid.RowSpan="2" />
+                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="31" Grid.RowSpan="2" />
 
         <ListBox x:Name="TVSeriesListBox" FontSize="10" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Grid.Row="30" Grid.Column="5" Grid.RowSpan="2"
+                    VerticalAlignment="Center" Grid.Row="31" Grid.Column="5" Grid.RowSpan="2"
                     Background="Transparent" HorizontalContentAlignment="Left" 
                     VerticalContentAlignment="Top" Grid.ColumnSpan="4"/>
 
         <TextBlock VerticalAlignment="Center" Text="Played by:"  HorizontalAlignment="Center"
-                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="36" Grid.RowSpan="2" />
+                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="35" Grid.RowSpan="2" />
 
         <ListBox x:Name="PlayedByListBox" FontSize="10" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Grid.Row="36" Grid.Column="5" Grid.RowSpan="2"
-                    Background="Transparent" HorizontalContentAlignment="Left" 
+                    VerticalAlignment="Center" Grid.Row="35" Grid.Column="5" Grid.RowSpan="2"
+                    Background="Transparent" HorizontalContentAlignment="Left"  
                     VerticalContentAlignment="Top" Grid.ColumnSpan="4"/>
 
 

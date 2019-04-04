@@ -18,6 +18,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -48,6 +49,8 @@
             <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -63,56 +66,57 @@
         </Grid.ColumnDefinitions>
         <SearchBox x:Name="Houses_Searchbox"  QuerySubmitted="HousesSearchBox_QuerySubmitted" 
                     SearchHistoryEnabled="False" Grid.ColumnSpan="6" 
-                    Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                    Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"/>
 
         <ListBox x:Name="HousesListBox" SelectionChanged="HousesListBox_SelectionChanged"
                     Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="29"/>
 
+        <ProgressRing x:Name="LoadingRing" Grid.Column="1" Grid.Row="33" Grid.ColumnSpan="3"/>
 
 
         <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5"
+        <TextBlock x:Name="NameTextBox" FontSize="10" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock Text="Region:"  FontWeight="Bold" FontSize="11" Grid.Row="3" Grid.Column="4"
                     HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <TextBlock x:Name="RegionTextBox" FontSize="10" Grid.Column="5" Grid.Row="3" 
+        <TextBlock x:Name="RegionTextBox" FontSize="10" Grid.Column="5" Grid.Row="3"  Grid.ColumnSpan="4" 
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-        <TextBlock Text="Coat of arms:" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <TextBlock Text="Coat of arms:" HorizontalAlignment="Center" VerticalAlignment="Center" 
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
 
-        <TextBlock x:Name="CoatOfArmsTextBox" FontSize="10" Grid.Column="5" Grid.Row="4" 
+        <TextBlock x:Name="CoatOfArmsTextBox" FontSize="10" Grid.Column="5" Grid.Row="4"  Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Words:" HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
 
-        <TextBlock x:Name="WordsTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"
-                    Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name="WordsTextBox" TextAlignment="Center" FontSize="10" Grid.Column="5"  Grid.ColumnSpan="4"
+                    Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
         <TextBlock VerticalAlignment="Center" Text="Current lord:" HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="6" />
 
-        <TextBlock x:Name="CurrentLordTextBox" FontSize="10" Grid.Column="5" Grid.Row="6"
-                    HorizontalAlignment="Left"
+        <ListBox x:Name="CurrentLordListBox" FontSize="10" Grid.Column="5" Grid.Row="6"  Grid.ColumnSpan="4"
+                    HorizontalAlignment="Left" Background="Transparent"
                    VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Heir:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="7"/>
 
-        <TextBlock x:Name="HeirTextBox" FontSize="10" Grid.Column="5" Grid.Row="7"
+        <ListBox x:Name="HeirListBox" Background="Transparent" FontSize="10" Grid.Column="5" Grid.Row="7"  Grid.ColumnSpan="4"
                     HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Overlord:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="8"/>
 
-        <ListBox x:Name="OverlordListBox" FontSize="10" Grid.Column="5" Grid.Row="8"
+        <ListBox x:Name="OverlordListBox" FontSize="10" Grid.Column="5" Grid.Row="8"  Grid.ColumnSpan="4"
                    HorizontalAlignment="Left" SelectionChanged="CadetBranchesListBox_SelectionChanged"
                    VerticalAlignment="Center" Background="Transparent"
                    HorizontalContentAlignment="Left"/>
@@ -120,20 +124,20 @@
         <TextBlock VerticalAlignment="Center" Text="Founded:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="9"/>
 
-        <TextBlock x:Name="FoundedTextBox" FontSize="10" Grid.Column="5" Grid.Row="9" 
+        <TextBlock x:Name="FoundedTextBox" FontSize="10" Grid.Column="5" Grid.Row="9"  Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Founder:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="10"/>
 
-        <TextBlock x:Name="FounderTextBox" FontSize="10" Grid.Column="5" Grid.Row="10" 
+        <ListBox x:Name="FounderListBox" Background="Transparent" FontSize="10" Grid.Column="5" Grid.Row="10"   Grid.ColumnSpan="4"
                    HorizontalAlignment="Left" VerticalAlignment="Center" 
                    />
 
         <TextBlock VerticalAlignment="Center" Text="Died out:"  HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="11"/>
 
-        <TextBlock x:Name="DiedOutTextBox" FontSize="10" Grid.Column="5" Grid.Row="11" 
+        <TextBlock x:Name="DiedOutTextBox" FontSize="10" Grid.Column="5" Grid.Row="11"   Grid.ColumnSpan="4"
                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <TextBlock VerticalAlignment="Center" Text="Titles:" HorizontalAlignment="Center" 
@@ -145,26 +149,26 @@
                     VerticalContentAlignment="Top"/>
 
         <TextBlock VerticalAlignment="Center" Text="Seats:"  HorizontalAlignment="Center"
-                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="16" Grid.RowSpan="2" />
+                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="17" Grid.RowSpan="2" />
 
         <ListBox x:Name="SeatsListBox" FontSize="10" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Grid.Row="16" Grid.Column="5" Grid.RowSpan="2"
+                    VerticalAlignment="Center" Grid.Row="17" Grid.Column="5" Grid.RowSpan="2"
                     Background="Transparent" HorizontalContentAlignment="Left" Grid.ColumnSpan="4"
                     VerticalContentAlignment="Top" />
 
         <TextBlock VerticalAlignment="Center" Text="Ancestral weapons:"  HorizontalAlignment="Center"
-                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="20" Grid.RowSpan="2" />
+                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="21" Grid.RowSpan="2" />
 
         <ListBox x:Name="AncestralWeaponsListBox" FontSize="10" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Grid.Row="20" Grid.Column="5" Grid.RowSpan="2"
+                    VerticalAlignment="Center" Grid.Row="21" Grid.Column="5" Grid.RowSpan="2"
                     Background="Transparent" HorizontalContentAlignment="Left" Grid.ColumnSpan="4"
                     VerticalContentAlignment="Top"/>
 
         <TextBlock VerticalAlignment="Center" Text="Cadet Branches:"  HorizontalAlignment="Center"
-                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="24" Grid.RowSpan="2" />
+                    FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="25" Grid.RowSpan="2" />
 
         <ListBox x:Name="CadetBranchesListBox" FontSize="10" HorizontalAlignment="Left"
-                    VerticalAlignment="Center" Grid.Row="24" Grid.Column="5" Grid.RowSpan="2"
+                    VerticalAlignment="Center" Grid.Row="25" Grid.Column="5" Grid.RowSpan="2"
                     Background="Transparent" HorizontalContentAlignment="Left" Grid.ColumnSpan="4"
                     VerticalContentAlignment="Top"
                  SelectionChanged="CadetBranchesListBox_SelectionChanged"/>
@@ -174,8 +178,8 @@
 
         <ListBox x:Name="SwornMembersListBox" FontSize="10" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Grid.Row="29" Grid.Column="5" Grid.RowSpan="2"
-                    Background="Transparent" HorizontalContentAlignment="Left" Grid.ColumnSpan="4"
-                    VerticalContentAlignment="Top" />
+                    Background="Transparent" HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Top" SelectionChanged="SwornMembersListBox_SelectionChanged" />
 
 
 

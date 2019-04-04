@@ -43,7 +43,7 @@
                 </NavigationViewItem>
             </NavigationView.MenuItems>
             <StackPanel>
-                <Frame x:Name="RootFrame" Margin="24, 0" />
+                <Frame x:Name="RootFrame" Margin="24, 0" x:FieldModifier="public" />
             </StackPanel>
            
         </NavigationView>

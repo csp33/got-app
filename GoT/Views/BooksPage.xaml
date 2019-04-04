@@ -18,8 +18,7 @@
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
@@ -30,9 +29,11 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -49,11 +50,13 @@
         
         <SearchBox x:Name="Books_Searchbox"  QuerySubmitted="BooksSearchBox_QuerySubmitted" 
                     SearchHistoryEnabled="False" Grid.ColumnSpan="6" 
-                    Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"
+                    Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"
                     VerticalAlignment="Center"/>
 
         <ListBox x:Name="BooksListBox" SelectionChanged="BooksListBox_SelectionChanged"
-                    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="12"/>
+                    Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="13"/>
+
+        <ProgressRing x:Name="LoadingRing" Grid.Column="1" Grid.Row="15" Grid.ColumnSpan="3"/>
 
 
         <TextBlock  Text="Name:" FontWeight="Bold" FontSize="11" Grid.Row="2" Grid.Column="4" 
@@ -71,8 +74,8 @@
         <TextBlock Text="Authors:" HorizontalAlignment="Center" VerticalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Column="4" Grid.Row="4"/>
 
-        <ItemsControl x:Name="AuthorsItemsControl" FontSize="10" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="4"
-                        HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ListBox x:Name="AuthorsListBox" FontSize="10" Grid.Column="5" Grid.Row="4" Grid.ColumnSpan="4"
+                        HorizontalAlignment="Left" VerticalAlignment="Center" Background="Transparent" IsTapEnabled="False"/>
 
         <TextBlock VerticalAlignment="Center" Text="Number of pages:" HorizontalAlignment="Center"
                     FontWeight="Bold" FontSize="11" Grid.Row="5" Grid.Column="4"/>
