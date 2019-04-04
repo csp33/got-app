@@ -61,20 +61,18 @@ namespace GoT.Views
             var selected = (sender as ListBox).SelectedItem as Book;
             if(selected!=null)
             {
-                NameTextBox.Text = selected.name;
+                //Texblocks
+                NameTextBox.Text = selected.name == "" ? "Unknown" : selected.name;
+                CountryTextBox.Text = selected.country == "" ? "Unknown" : selected.country;
+                ISBNTextBox.Text = selected.isbn == "" ? "Unknown" : selected.isbn;
+                MediaTypeTextBox.Text = selected.mediaType == "" ? "Unknown" : selected.mediaType;
+                ReleasedTextBox.Text = selected.released.Substring(0,10) == "" ? "Unknown" : selected.released.Substring(0, 10);
+                PublisherTextBox.Text = selected.publisher == "" ? "Unknown" : selected.publisher;
+                NumberOfPagesTextBox.Text = selected.numberOfPages.ToString() == "" ? "Unknown" : selected.numberOfPages.ToString();
+                //ListBoxes
                 AuthorsItemsControl.ItemsSource = selected.authors;
-  
                 CharactersListBox.ItemsSource = selected.characters;
-
                 povCharactersListBox.ItemsSource = selected.povCharacters;
-
-
-                CountryTextBox.Text = selected.country;
-                ISBNTextBox.Text = selected.isbn;
-                MediaTypeTextBox.Text = selected.mediaType;
-                ReleasedTextBox.Text = selected.released.Substring(0,10);
-                PublisherTextBox.Text = selected.publisher;
-                NumberOfPagesTextBox.Text = selected.numberOfPages.ToString();
             }
 
         }
@@ -84,12 +82,19 @@ namespace GoT.Views
             var books = await service.GetBooksAsync();
             foreach(var item in books)
             {
-                if (item.name != null)
+                if (item.name != "")
                 {
                     BooksList.Add(item);
                 }
             }
             BooksListBox.ItemsSource = BooksList;
+        }
+
+        private void CharactersListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var character = (sender as ListBox).SelectedItem;
+           //Go to character page
+
         }
     }
 }

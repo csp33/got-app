@@ -14,32 +14,32 @@ namespace GoT.Services
 
         public async Task<List<Book>> GetBooksAsync()
         {
-            return await GetAsync<List<Book>>(new Uri(serverUrl, "/api/books"));
+            return await GetAsync<List<Book>>(new Uri(serverUrl, "/api/books/?pagesize="+int.MaxValue.ToString()));
         }
 
         public async Task<List<Character>> GetCharactersAsync()
         {
-            return await GetAsync<List<Character>>(new Uri(serverUrl, "/api/characters"));
+            return await GetAsync<List<Character>>(new Uri(serverUrl, "/api/characters/?pagesize=" + int.MaxValue.ToString()));
         }
 
         public async Task<List<House>> GetHousesAsync()
         {
-            return await GetAsync<List<House>>(new Uri(serverUrl, "/api/houses"));
+            return await GetAsync<List<House>>(new Uri(serverUrl, "/api/houses/?pagesize=" + int.MaxValue.ToString()));
         }
 
         public async Task<Book> GetBookAsync(string code)
         {
-            return await GetAsync<Book>(new Uri(serverUrl, "/api/books/"+code));
+            return await GetAsync<Book>(new Uri(code));
         }
 
         public async Task<Character> GetCharacterAsync(string code)
         {
-            return await GetAsync<Character>(new Uri(serverUrl, "/api/characters/"+code));
+            return await GetAsync<Character>(new Uri(code));
         }
 
         public async Task<House> GetHouseAsync(string code)
         {
-            return await GetAsync<House>(new Uri(serverUrl, "/api/houses/"+code));
+            return await GetAsync<House>(new Uri(code));
         }
 
         private async Task<T> GetAsync<T>(Uri uri)

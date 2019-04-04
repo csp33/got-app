@@ -34,10 +34,6 @@ namespace GoT
                 case "characters":
                     RootFrame.Navigate(typeof(CharactersPage));
                     break;
-                case "home":
-                default:
-                    RootFrame.Navigate(typeof(HomePage));
-                    break;
             }
         }
     }

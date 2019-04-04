@@ -9,15 +9,38 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock FontSize="44" FontFamily="Segoe UI" 
-                   FontWeight="Bold" Margin="0,60,0,12" HorizontalAlignment="Center" 
-                   VerticalAlignment="Stretch" ><Run Text="Game of Thrones" /><LineBreak/><Run/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/splash.png" AlignmentX="Center"  
+                        AlignmentY="Center" Opacity="0.3">
+                <ImageBrush.Transform>
+                    <ScaleTransform ScaleX="1" ScaleY="0.8"/>
+                </ImageBrush.Transform>
+            </ImageBrush>
+        </Grid.Background>
+        <TextBlock FontSize="44" FontFamily="/Assets/Fonts/gotfont.ttf#Game of Thrones" 
+                   FontWeight="Bold" Margin="0,77,0,862" HorizontalAlignment="Center" >
+            <Run Text="Game    of    Thrones" /><LineBreak/><Run/>
         </TextBlock>
+
+        <TextBlock FontFamily="Segoe UI" FontSize="30" 
+                   HorizontalAlignment="Center" Margin="0,182,0,757">
+            Please select an item from the menu.
+        </TextBlock>
+
+        <TextBlock FontFamily="Segoe UI" FontSize="24" 
+                   HorizontalAlignment="Center" Margin="0,253,0,709" VerticalAlignment="Stretch">
+            Thanks to <Hyperlink NavigateUri="https://anapioficeandfire.com/">
+                https://anapioficeandfire.com/</Hyperlink>
+        </TextBlock>
+
+        <TextBlock FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"
+                   HorizontalAlignment="Left" Margin="470,304,0,646">
+            Source code available at <Hyperlink NavigateUri="https://github.com/csp98/got-app">
+                https://github.com/csp98/got-app </Hyperlink>
+        </TextBlock>
+
+        <Image Source="/Assets/github.png" Margin="386,304,1021,646" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
         
-        <TextBlock x:Name="HomePageMessage" FontFamily="Segoe UI" FontSize="30" 
-                   HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Stretch">
-            Please select an option from the menu.
-        </TextBlock>
-    
     </Grid>
 </Page>

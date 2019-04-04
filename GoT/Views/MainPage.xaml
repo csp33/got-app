@@ -23,11 +23,6 @@
 
 
             <NavigationView.MenuItems>
-                <NavigationViewItem Content="Home" x:Name="Home" Tag="home">
-                    <NavigationViewItem.Icon>
-                        <FontIcon Glyph="&#xE819;"/>
-                    </NavigationViewItem.Icon>
-                </NavigationViewItem>
                 <NavigationViewItem Content="Books" x:Name="Books" 
                                     Tag="books">
                     <NavigationViewItem.Icon>
@@ -48,7 +43,6 @@
                 </NavigationViewItem>
             </NavigationView.MenuItems>
             <StackPanel>
-                <controls:InAppNotification x:Name="Notification" ShowDismissButton="true" />
                 <Frame x:Name="RootFrame" Margin="24, 0" />
             </StackPanel>
            

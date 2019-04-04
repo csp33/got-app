@@ -58,21 +58,42 @@ namespace GoT.Views
         private void HousesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selected = (sender as ListBox).SelectedItem as House;
-            AncestralWeaponsListBox.ItemsSource = selected.ancestralWeapons;
-            CadetBranchesListBox.ItemsSource = selected.cadetBranches;
-            SwornMembersListBox.ItemsSource = selected.swornMembers;
-            DiedOutTextBox.Text = selected.diedOut;
-            FounderTextBox.Text = selected.founder;
-            FoundedTextBox.Text = selected.founded;
-            OverlordTextBox.Text = selected.overlord;
-            HeirTextBox.Text = selected.heir;
-            CurrentLordTextBox.Text = selected.currentLord;
-            SeatsListBox.ItemsSource = selected.seats;
-            TitlesListBox.ItemsSource = selected.titles;
-            WordsTextBox.Text = selected.words;
-            CoatOfArmsTextBox.Text = selected.coatOfArms;
-            RegionTextBox.Text = selected.region;
-            NameTextBox.Text = selected.name;
+            if (selected != null)
+            {
+
+                //Textblocks
+                DiedOutTextBox.Text = selected.diedOut == "" ? "Unknown" : selected.diedOut;
+                FoundedTextBox.Text = selected.founded == "" ? "Unknown" : selected.founded;
+
+                WordsTextBox.Text = selected.words == "" ? "Unknown" : selected.words;
+                CoatOfArmsTextBox.Text = selected.coatOfArms == "" ? "Unknown" : selected.coatOfArms;
+                RegionTextBox.Text = selected.region == "" ? "Unknown" : selected.region;
+                NameTextBox.Text = selected.name == "" ? "Unknown" : selected.name;
+                //ListBoxes
+                AncestralWeaponsListBox.ItemsSource = selected.ancestralWeapons;
+                SeatsListBox.ItemsSource = selected.seats;
+                TitlesListBox.ItemsSource = selected.titles;
+                /**Links***/
+
+                //House
+                List<string> cadetBranches = new List<string>();
+                foreach (var item in selected.cadetBranches)
+                {
+                    cadetBranches.Add(HousesList.Find(x => x.url == item).ToString());
+                }
+                CadetBranchesListBox.ItemsSource = cadetBranches;
+
+                var overlord = HousesList.Find(x => x.url == selected.overlord);
+                OverlordListBox.Items.Clear();
+                OverlordListBox.Items.Add(overlord == null ? "Unknown" : overlord.ToString());
+
+                //Character
+                SwornMembersListBox.ItemsSource = selected.swornMembers;
+                FounderTextBox.Text = selected.founder == "" ? "Unknown" : selected.founder;
+                HeirTextBox.Text = selected.heir == "" ? "Unknown" : selected.heir;
+                CurrentLordTextBox.Text = selected.currentLord == "" ? "Unknown" : selected.currentLord;
+            }
+
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -81,7 +102,7 @@ namespace GoT.Views
             var houses = await service.GetHousesAsync();
             foreach (var item in houses)
             {
-                if (item.name != null)
+                if (item.name != "")
                 {
                     HousesList.Add(item);
                 }
@@ -89,5 +110,16 @@ namespace GoT.Views
             HousesListBox.ItemsSource = HousesList;
         }
 
+        private void OverlordButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedstr = (sender as Button).Content as string;
+            HousesListBox.SelectedItem = HousesList.Find(x => x.name == selectedstr);
+        }
+
+        private void CadetBranchesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedstr = (sender as ListBox).SelectedItem as string;
+            HousesListBox.SelectedItem= HousesList.Find(x => x.name == selectedstr);
+        }
     }
 }
